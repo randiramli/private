@@ -7,6 +7,18 @@ https://client.nextnesia.net:2087/cpsess4088983904/json-api/emailtrack_search
  
 1
 
+
+
+// AWAL CASE BOT HOSTING
+case 'ceksmtp':
+respon = await fetchJson(`http://randiramli.my.id/api/hosting/smtp.php`)
+replyy(respon)
+break 
+// AKHIR CASE BOT HOSTING
+
+
+
+
 api.version=1&success=1&defer=1&failure=1&inprogress=1&deliverytype=all&max_results_by_type=1000&api.sort.enable=1&api.sort.a.reverse=1&api.sort.a.field=sendunixtime&api.filter.enable=1&api.filter.verbose=1&api.filter.b.field=sendunixtime&api.filter.b.type=lt&api.filter.b.arg0=1652257081&api.filter.a.field=sendunixtime&api.filter.a.type=gt&api.filter.a.arg0=1652163479&api.chunk.enable=1&api.chunk.verbose=1&api.chunk.start=1&api.chunk.size=25
 
 

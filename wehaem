@@ -6,7 +6,7 @@ https://client.nextnesia.net:2087/cpsess4088983904/json-api/emailtrack_search
 
  
 1
-
+https://hostname.example.com:2087/cpsess##########/json-api/createacct?api.version=1&username=username&domain=example.com&bwlimit=unlimited&cgi=1&contactemail=username@example.com&cpmod=paper_lantern&customip=192.0.2.0&dkim=1&featurelist=feature_list&forcedns=0&frontpage=0&gid=123456789&hasshell=0&hasuseregns=1&homedir=/home/user&ip=n&language=en&owner=root&mailbox_format=mdbox&max_defer_fail_percentage=unlimited&max_email_per_hour=unlimited&max_emailacct_quota=1024&maxaddon=unlimited&maxftp=unlimited&maxlst=unlimited&maxpark=unlimited&maxpop=unlimited&maxsql=unlimited&maxsub=unlimited&mxcheck=auto&password=123456luggage&pkgname=my_new_package&plan=default
 
 
 // AWAL CASE BOT HOSTING

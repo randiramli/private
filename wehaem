@@ -65,6 +65,34 @@ SENDER : ${send}
 
 
 
+    case 'ceksmtp':
+
+    server = "client.nextnesia.net"
+    uroot = "randy"
+    proot = "@@server##"
+    result = await fetchJson(`http://randiramli.my.id/api/hosting/smtp.php?server=${server}&uroot=${uroot}&proot=${proot}`)
+   
+    mess = result.result.message
+    at = result.result.actiontime
+    td = result.result.deliveredto
+    ip = result.result.ip
+    user = result.result.user
+    ress = `
+    STATUS SMTP TERBARU
+    ${at}
+    ~~~~~~~~~~~~~~~~
+    MESSAGE : ${mess}
+    USER : ${user}
+    TO : ${td}
+    IP : ${ip}
+    ~~~~~~~~~~~~~~~~
+    `
+
+        
+nayla.sendMessage(from, {text: ress}, {quoted:nay1})
+
+
+
 
 
 

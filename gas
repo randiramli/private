@@ -1,0 +1,40 @@
+const cron = require('node-cron');
+const os = require('os')
+const scrap = require('./api.js')
+process.env.TZ = "Asia/Makassar";
+const job = cron.schedule('* * * * * *', async function() {
+    date = new Date();
+detik = date.getSeconds();
+menit = date.getMinutes();
+jam = date.getHours();
+tanggal = date.getDate();
+bulan = date.getMonth();
+tahun = date.getFullYear();
+result = await scrap(tahun,bulan, tanggal);
+
+now = `${jam}:${menit}`
+jamnow = "10:44"
+//console.log(now)
+//console.log(jamnow)
+if(result.subuh == now){
+	pesan = `sekarang pukul ${now}, Waktunya Sholat *Subuh*`
+	}
+ else if (result.dhuha == now){
+	pesan = `sekarang pukul ${now}, Waktunya Sholat *dhuha*`
+	} else if (result.dzuhur == now){
+	pesan = `sekarang pukul ${now}, Waktunya Sholat *dzuhur*`
+	} else if (result.ashar == now){
+	pesan = `sekarang pukul ${now}, Waktunya Sholat *ashar*`
+	} else if (result.maghrib == now){
+	pesan = `sekarang pukul ${now}, Waktunya Sholat *maghrib*`
+	} else if (result.isya == now){
+	pesan = `sekarang pukul ${now}, Waktunya Sholat *isya*`
+	} else if (jamnow == now){
+	pesan = `sekarang pukul ${now}, test`
+	}
+	
+text = encodeURI(pesan)
+
+console.log(text)
+})
+job.start()

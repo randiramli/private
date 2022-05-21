@@ -1,0 +1,26 @@
+Alhamdulilllah bug sudah diperbaiki silahkan di server.js
+Line 24 sampai 34
+const db = mysql.createConnection({
+    host: process.env.DB_HOSTNAME,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
+});
+
+db.connect((err) => {
+    if (err) throw err;
+    console.log('Mysql Connected...');
+});
+
+Menjadi ini
+const db = mysql.createPool({
+    host: process.env.DB_HOSTNAME,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
+});
+
+db.getConnection((err) => {
+    if (err) throw err;
+    console.log('Mysql Connected...');
+});

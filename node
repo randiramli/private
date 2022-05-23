@@ -24,3 +24,125 @@ db.getConnection((err) => {
     if (err) throw err;
     console.log('Mysql Connected...');
 });
+
+
+
+
+
+
+<?php
+class Aditdev {
+
+    public $api_url = 'https://abedpedia.id/api/'; // API URL
+
+    public $api_id = ''; // Your API ID
+
+    public $api_key = ''; // Your API key
+
+    public $secret_key = ''; // Your Secret key
+
+    public function profile() { // get profile
+        return json_decode($this->connect('profile', array(
+            'api_id' => $this->api_id,
+            'api_key' => $this->api_key,
+            'secret_key' => $this->secret_key
+        )), true);
+    }
+
+    public function services() { // get services
+        return json_decode($this->connect('services', array(
+            'api_id' => $this->api_id,
+            'api_key' => $this->api_key,
+            'secret_key' => $this->secret_key
+        )), true);
+    }
+
+    public function order($data) { // create order
+        $post = array_merge(array('api_id' => $this->api_id, 'api_key' => $this->api_key, 'secret_key' => $this->secret_key), $data);
+        return json_decode($this->connect('order', $post), true);
+    }
+    
+    public function status($order_id) { // check order status
+        return json_decode($this->connect('status', array(
+            'api_id' => $this->api_id,
+            'api_key' => $this->api_key,
+            'secret_key' => $this->secret_key,
+            'id' => $order_id
+        )), true);
+    }
+    
+    public function refill($order_id) { // create refill
+        return json_decode($this->connect('refill', array(
+            'api_id' => $this->api_id,
+            'api_key' => $this->api_key,
+            'secret_key' => $this->secret_key,
+            'id' => $order_id
+        )), true);
+    }
+    
+    public function refill_status($refill_id) { // check refill status
+        return json_decode($this->connect('refill_status', array(
+            'api_id' => $this->api_id,
+            'api_key' => $this->api_key,
+            'secret_key' => $this->secret_key,
+            'id' => $refill_id
+        )), true);
+    }
+
+    private function connect($endpoint, $post) {
+        $_post = array();
+        if (is_array($post)) {
+            foreach ($post as $name => $value) {
+                $_post[] = $name . '=' . urlencode($value);
+            }
+        }
+        $ch = curl_init($this->api_url . $endpoint);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        if (is_array($post)) {
+            curl_setopt($ch, CURLOPT_POSTFIELDS, join('&', $_post));
+        }
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)');
+        $result = curl_exec($ch);
+        if (curl_errno($ch) != 0 && empty($result)) {
+            $result = false;
+        }
+        curl_close($ch);
+        return $result;
+    }
+}
+
+$api = new Aditdev();
+
+# Profile #
+$profile = $api->profile(); # return user profile
+
+# Services #
+$services = $api->services(); # return all services
+
+# Create Order #
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'quantity' => 100)); # Default
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test')); # Package
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'comments' => "aditdev\ndeveloper\n")); # Custom Comments
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'quantity' => 100, 'usernames' => "aditdev\ndeveloper\n")); # Mentions
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'usernames' => "aditdev\ndeveloper\n")); # Mentions Custom List
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'quantity' => 100, 'hashtag' => 'aditdev')); # Mentions Hashtag
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'quantity' => 1000, 'username' => 'aditdev')); # Mentions User Followers
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'comments' => "aditdev\ndeveloper\n")); # Custom Comments Package
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'quantity' => 100, 'username' => 'aditdev')); # Comment Likes
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'quantity' => 100, 'answer_number' => '23')); # Poll
+$order = $api->order(array('service' => 1, 'target' => 'http://example.com/test', 'username' => 'aditdev', 'comments' => "designer\ndeveloper\n")); # Comment Replies
+
+# Check Order Status #
+$status = $api->status($order['data']['id']); # return order id, price, status, start count, remains
+
+# Create Refill #
+$refill = $api->refill($order['data']['id']); # return refill id, order id
+
+# Check Refill Status #
+$refill_status = $api->refill_status($refill['data']['refill_id']); # return refill id, order id, status
+                        

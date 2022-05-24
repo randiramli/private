@@ -1,0 +1,24 @@
+const sendMenuu = async (satu, dua, tiga, empat) => {
+    var menuu1 = await generateWAMessageFromContent(
+        id,
+        {
+            templateMessage: {
+                hydratedTemplate: {
+                    ...empat.message,
+                    hydratedContentText: dua,
+                    hydratedFooterText: tiga,
+                    hydratedButtons: [
+                        { urlButton: { displayText: "SOURCE CODE", url: "https://youtube.com/channel/UCeQaKIQQhDNHMOq_odQh5Sw" } },
+                        { urlButton: { displayText: "OWNER", url: "https://wa.me/" + nomerowner } },
+                        { quickReplyButton: { displayText: "ALLMENU", id: `${prefix}allmenu` } },
+                    ],
+                },
+            },
+        },
+        {}
+    );
+    sock.relayMessage(satu, menuu1.message, { messageId: menuu1.key.id });
+};
+
+
+await sendMenuu(id, text, `footer`, await sock.sendnew(from, {video: {url: "https://i.ibb.co/G3DL4Dz/rndybotz.jpg", caption: text}, gifPlayback: true}))

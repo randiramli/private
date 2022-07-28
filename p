@@ -1,0 +1,1 @@
+https://play.mobilelegends.com/tools/accretrieve/#/myemail?zoneId=9180&name=%D5%AA%C3%AD%D5%B2%22%D5%80&nick=%D5%AA%C3%AD%D5%B2%22%D5%80&userid=9180&gg=sar%2a%2a%2a%2a%40gmail.com&mt=ran%2a%2a%2a%2a%40gmail.com&back=1

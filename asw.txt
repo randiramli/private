@@ -1,0 +1,230 @@
+XHRPOSThttps://us-central1-grivy-barcode.cloudfunctions.net/claimCoupon
+[HTTP/2 200 OK 548ms]
+
+	
+Request payload	
+
+1
+
+{"data":{"coupon":{"id":"a4af3e30a26542bfbce2cae711dae6120cfa30d1a5fdc7404e941f999bf702d1","code":null,"status":"grabbed","opened_expire_in":{"days":7,"hours":22,"minutes":0,"seconds":1},"claimed_expire_in":null,"claim_approved":null,"claim_approve_status":null,"claim_approval_message":null,"just_grabbed":true,"transacted_claim":null,"destination_url":null,"cashback_status":null,"cashback_amount":null,"cashback_status_change_at":null,"receipt_id":null},"terms_conditions_01":false,"terms_conditions_02":true,"terms_conditions_03":false,"latitude":null,"longitude":null,"childBirthday":null,"userFirstName":null,"userLastName":null,"phonePopup":null,"recaptcha_token":"03AEkXODC-xt-P6dkM82CnwuZPDQwNq-arggkgS3ql_qTP43CX9_JihjkP-Tyk090Hkim4lGZ4f75bLAlPThVsYXz-usjq-pTP7KNFzUhMIfWq7GyUJ_nWuhke9dTgsoh2hw3GydKS3DHmA4kLydam215dvBvzj3w3L5XsQXUp4uRvOy45YOrvLrAaF4N1wzlgEmZm8ugbiPsDSQJZ5UOReOvXxOwTV3d97aKiaGoj_mVu_2AMCWdwMAyGSbeJBeWrx0e2SrE_sGyTYVKqtV99gTNhgdPokm--pm8SnZHvc4zBjTSTf7qvYFnEtLL2kKimayV48i6WylQHj14UxsxJpbYzORKambHLPS7saZT_oUUyayvpi8R5kJV5E1gh77PCl24Rw70JKVtb-tf4Bf5kibbEPwk8GqT4byhHZGSwV4ZLjbdoOIv6ju3lhIihsh0ucpaJnDJogV9VFnqoyeAEv0wXhASG9zsoitJGM0Juxnkl5CIsyCqIBIOTc9lDM7UhtFtwlsuI4867Je9j0MSa2mlSTqn7B4YGskZ_OaoI4Uj04hEofy3C1ou82yKr6WJ_QKM-Ox8XtKRIct06XhaoWn5hD9-zSRI2qWrwvKifkU3qnZSGXRhVJAfbBFFKznWgDot7qhY7Qy8rn4P5P8_ALQaAQ9cpm97flb90AJcRR3ggGXc8soKoT7joDWolg_Dtt3Rlrvk2gVOmR4pjqMZCxPhlfSztWlerBXyAWQBd0XFVtBkswahzAYW6qLHw3TrM-UnIzqA1Ilmqi3EpxlUxjyCIMPkYCXExpstAAbJ9emAcuDicean5itFSCyC3fj9dORUJ48dNLpVQGUkAE9_Mi1sWUJ3dvmNt_GdSXZ37NY7_Z9Gpe0LZrMeBX780QL20WdWcyCcRIdHEs1vNhv4G1qvU3n4nKgg0MCYQw93PgvLSlpc7Psupl7jO09hYJp2ilzneVXuzj5q-BGxbXloxAeC7c0KDvs-RjOdMmiOUfX41fqhjVSjzjeenYhPAt67LoPFOp-wrGUQA5qbBDBcjDiw9F-1pllO6hNN5mVRDQVmlz_gCtK4A_mIGQ18Eh9nygLFclha7RJNPpUTQpyXV7ROy5pigixjQeUS2cw5erHF2AC7Xt8FYmZ_QXq3nz27sAJ9fGru3sCbTR_OfaZwtp88ovPheCq9FLr_xcwyEvRKr67UnlqxcDYDvvP6iBHgtIPidNyG1av9RVN7Xs0qUvaLDLB9gPAAlt4iibR_EHCf9p8GQveXR91eFFqZeWIgxTbt75K9zvWZTRbfaVWSXBeNUw-hmBwiW8pOfLvowSuYXm6WEtY7ys4KwOsEZ0qciJDMcNcU47lFM3LSHadiCh8Ve3WDoa0uBYQZqTYjXf4NWAqRyndis690EhBweFFO3_xVVcbCYD-ITC-9yakWP--N5omP6LWGjZVM33CDFIZhD1vqPzbgu_KdiUOABoJvjqSxh_c_Wz7zV_OxRxvNKBHB8ZW9xMFfSU6gmU2RsXY3RdDWySJkGal3ZCq24UnlHkeIpJcyQbq1K","domain":"ayo_coca_cola"}}
+
+
+
+XHRPOSThttps://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyCustomToken?key=AIzaSyC2Jncgy1smi8CV91PG3sUZBDAo5raozYc
+[HTTP/2 200 OK 376ms]
+
+	
+JSON	
+kind	identitytoolkit#VerifyCustomTokenResponse
+idToken	eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoianNkZWxpdnIgY2RuIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2dyaXZ5LWJhcmNvZGUiLCJhdWQiOiJncml2eS1iYXJjb2RlIiwiYXV0aF90aW1lIjoxNjY4ODMyNzk3LCJ1c2VyX2lkIjoiMTEwMDc4MDc3MDIzNzMyODEwNDg0Iiwic3ViIjoiMTEwMDc4MDc3MDIzNzMyODEwNDg0IiwiaWF0IjoxNjY4ODMyNzk3LCJleHAiOjE2Njg4MzYzOTcsImVtYWlsIjoianNkZWxpdnJjZG5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpzZGVsaXZyY2RuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6ImN1c3RvbSJ9fQ.oKCJfgp9BnJSbazF00uPbs7EENkFtIw-KVFx3ONcH32LUK2UrBkZNy-Mq_mgyXoUeWe4uxfAMZlruxL896piYNuQlq0l0pZPtPC4T7XImI0t1uixDugS_wS7zjY7PT69IlQZan3TqB4O1kURHhMAAcgfRfLanXccgIw3bIl0bfbqr4_0c9TvFTLn4lj-xu2Om19GQfc-iaV2u5EqMgb5ojLs29k3FIZQ5tUfYCwejfxwJPwZk2rL2Hd4UWvkjvhmZSi9kiLeuuKuASUJGS9cqSN85Fip3qd-wyHot4GnLAjv38XByWSTQjhV9AM5Hy2qdyI0ObKhheYU8xl_f6fEUg
+refreshToken	AOkPPWSJ_UR9AXtE2x5Zai_j8c4i1wiFi6-f96bj_pQCfMnhuQ5yTRGwOpviQrDDtX4R1tHpwSKlMQuUgOsYTbNjikuj-fcxxOHx1fUdJe3eVMItvxLSGf978iNbY_OgDaoPOyZwbPIuqLrwT5Pnn62kE-SLDPGJ3-J7WTknNpQTc9K-aBGQj_E
+expiresIn	3600
+isNewUser	false
+Response Payload	
+
+1
+
+{
+
+2
+
+  "kind": "identitytoolkit#VerifyCustomTokenResponse",
+
+3
+
+  "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoianNkZWxpdnIgY2RuIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2dyaXZ5LWJhcmNvZGUiLCJhdWQiOiJncml2eS1iYXJjb2RlIiwiYXV0aF90aW1lIjoxNjY4ODMyNzk3LCJ1c2VyX2lkIjoiMTEwMDc4MDc3MDIzNzMyODEwNDg0Iiwic3ViIjoiMTEwMDc4MDc3MDIzNzMyODEwNDg0IiwiaWF0IjoxNjY4ODMyNzk3LCJleHAiOjE2Njg4MzYzOTcsImVtYWlsIjoianNkZWxpdnJjZG5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpzZGVsaXZyY2RuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6ImN1c3RvbSJ9fQ.oKCJfgp9BnJSbazF00uPbs7EENkFtIw-KVFx3ONcH32LUK2UrBkZNy-Mq_mgyXoUeWe4uxfAMZlruxL896piYNuQlq0l0pZPtPC4T7XImI0t1uixDugS_wS7zjY7PT69IlQZan3TqB4O1kURHhMAAcgfRfLanXccgIw3bIl0bfbqr4_0c9TvFTLn4lj-xu2Om19GQfc-iaV2u5EqMgb5ojLs29k3FIZQ5tUfYCwejfxwJPwZk2rL2Hd4UWvkjvhmZSi9kiLeuuKuASUJGS9cqSN85Fip3qd-wyHot4GnLAjv38XByWSTQjhV9AM5Hy2qdyI0ObKhheYU8xl_f6fEUg",
+
+4
+
+  "refreshToken": "AOkPPWSJ_UR9AXtE2x5Zai_j8c4i1wiFi6-f96bj_pQCfMnhuQ5yTRGwOpviQrDDtX4R1tHpwSKlMQuUgOsYTbNjikuj-fcxxOHx1fUdJe3eVMItvxLSGf978iNbY_OgDaoPOyZwbPIuqLrwT5Pnn62kE-SLDPGJ3-J7WTknNpQTc9K-aBGQj_E",
+
+5
+
+  "expiresIn": "3600",
+
+6
+
+  "isNewUser": false
+
+7
+
+}
+
+8
+
+​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+XHRPOSThttps://www.googleapis.com/identitytoolkit/v3/relyingparty/getAccountInfo?key=AIzaSyC2Jncgy1smi8CV91PG3sUZBDAo5raozYc
+[HTTP/2 200 OK 351ms]
+
+	
+JSON	
+kind	identitytoolkit#GetAccountInfoResponse
+users	[…]
+0	{…}
+localId	110078077023732810484
+email	jsdelivrcdn@gmail.com
+displayName	jsdelivr cdn
+emailVerified	false
+validSince	1668831614
+disabled	false
+lastLoginAt	1668832797900
+createdAt	1668831614676
+customAuth	true
+lastRefreshAt	2022-11-19T04:39:57.900Z
+Response Payload	
+1
+
+{
+
+2
+
+  "kind": "identitytoolkit#GetAccountInfoResponse",
+
+3
+
+  "users": [
+
+4
+
+    {
+
+5
+
+      "localId": "110078077023732810484",
+
+6
+
+      "email": "jsdelivrcdn@gmail.com",
+
+7
+
+      "displayName": "jsdelivr cdn",
+
+8
+
+      "emailVerified": false,
+
+9
+
+      "validSince": "1668831614",
+
+10
+
+      "disabled": false,
+
+11
+
+      "lastLoginAt": "1668832797900",
+
+12
+
+      "createdAt": "1668831614676",
+
+13
+
+      "customAuth": true,
+
+14
+
+      "lastRefreshAt": "2022-11-19T04:39:57.900Z"
+
+15
+
+    }
+
+16
+
+  ]
+
+17
+
+}
+
+18
+
+​
+
+
+
+
+
+
+
+
+
+
+
+
+
+XHRPOSThttps://us-central1-grivy-barcode.cloudfunctions.net/getUserIdEncrypted
+[HTTP/2 200 OK 404ms]
+
+	
+JSON	
+result	{…}
+user_id_encrypted	cf63a1323c5ebf53aec74580f210ec81ea3409129fade3a437ad4e3ac67d9aad
+Response Payload	
+
+1
+
+{"result":{"user_id_encrypted":"cf63a1323c5ebf53aec74580f210ec81ea3409129fade3a437ad4e3ac67d9aad"}}
+
+
+
+
+
+
+
+
+
+XHRPOSThttps://us-central1-grivy-barcode.cloudfunctions.net/grabCoupon
+[HTTP/2 429 No Reason Phrase 1602ms]
+
+	
+Request payload	
+
+1
+
+{"data":{"publicCode":"sat-coke-ayo-901","gaCid":"886790783.1668832510","cdsPixelId":"174a26f4-e41b-5f0e-a494-1482bc9b0dda","latitude":null,"longitude":null,"domain":"ayo_coca_cola"}}
+
+
+
+
+
+XHRPOSThttps://us-central1-grivy-barcode.cloudfunctions.net/claimCoupon
+[HTTP/2 200 OK 548ms]
+
+	
+Request payload	
+
+1
+
+{"data":{"coupon":{"id":"a4af3e30a26542bfbce2cae711dae6120cfa30d1a5fdc7404e941f999bf702d1","code":null,"status":"grabbed","opened_expire_in":{"days":7,"ho
+    urs":22,"minutes":0,"seconds":1},"claimed_expire_in":null,"claim_approved":null,"claim_approve_status":null,"claim_approval
+    _message":null,"just_grabbed":true,"transacted_claim":null,"destination_url":null,"cashback_status":null,"cashback_amount":nul
+    l,"cashback_status_change_at":null,"receipt_id":null},"terms_conditions_01":false,"terms_conditions_02":true,"terms_conditions_03
+    ":false,"latitude":null,"longitude":null,"childBirthday":null,"userFirstName":null,"userLastName":null,"phonePopup":null,"recaptcha_token":"03AEkXODC-xt-P6dkM82CnwuZPDQwNq-arggkgS3ql_qTP43CX9_JihjkP-Tyk090Hkim4lGZ4f75bLAlPThVsYXz-usjq-pTP7KNFzUhMIfWq7GyUJ_nWuhke9dTgsoh2hw3GydKS3DHmA4kLydam215dvBvzj3w3L5XsQXUp4uRvOy45YOrvLrAaF4N1wzlgEmZm8ugbiPsDSQJZ5UOReOvXxOwTV3d97aKiaGoj_mVu_2AMCWdwMAyGSbeJBeWrx0e2SrE_sGyTYVKqtV99gTNhgdPokm--pm8SnZHvc4zBjTSTf7qvYFnEtLL2kKimayV48i6WylQHj14UxsxJpbYzORKambHLPS7saZT_oUUyayvpi8R5kJV5E1gh77PCl24Rw70JKVtb-tf4Bf5kibbEPwk8GqT4byhHZGSwV4ZLjbdoOIv6ju3lhIihsh0ucpaJnDJogV9VFnqoyeAEv0wXhASG9zsoitJGM0Juxnkl5CIsyCqIBIOTc9lDM7UhtFtwlsuI4867Je9j0MSa2mlSTqn7B4YGskZ_OaoI4Uj04hEofy3C1ou82yKr6WJ_QKM-Ox8XtKRIct06XhaoWn5hD9-zSRI2qWrwvKifkU3qnZSGXRhVJAfbBFFKznWgDot7qhY7Qy8rn4P5P8_ALQaAQ9cpm97flb90AJcRR3ggGXc8soKoT7joDWolg_Dtt3Rlrvk2gVOmR4pjqMZCxPhlfSztWlerBXyAWQBd0XFVtBkswahzAYW6qLHw3TrM-UnIzqA1Ilmqi3EpxlUxjyCIMPkYCXExpstAAbJ9emAcuDicean5itFSCyC3fj9dORUJ48dNLpVQGUkAE9_Mi1sWUJ3dvmNt_GdSXZ37NY7_Z9Gpe0LZrMeBX780QL20WdWcyCcRIdHEs1vNhv4G1qvU3n4nKgg0MCYQw93PgvLSlpc7Psupl7jO09hYJp2ilzneVXuzj5q-BGxbXloxAeC7c0KDvs-RjOdMmiOUfX41fqhjVSjzjeenYhPAt67LoPFOp-wrGUQA5qbBDBcjDiw9F-1pllO6hNN5mVRDQVmlz_gCtK4A_mIGQ18Eh9nygLFclha7RJNPpUTQpyXV7ROy5pigixjQeUS2cw5erHF2AC7Xt8FYmZ_QXq3nz27sAJ9fGru3sCbTR_OfaZwtp88ovPheCq9FLr_xcwyEvRKr67UnlqxcDYDvvP6iBHgtIPidNyG1av9RVN7Xs0qUvaLDLB9gPAAlt4iibR_EHCf9p8GQveXR91eFFqZeWIgxTbt75K9zvWZTRbfaVWSXBeNUw-hmBwiW8pOfLvowSuYXm6WEtY7ys4KwOsEZ0qciJDMcNcU47lFM3LSHadiCh8Ve3WDoa0uBYQZqTYjXf4NWAqRyndis690EhBweFFO3_xVVcbCYD-ITC-9yakWP--N5omP6LWGjZVM33CDFIZhD1vqPzbgu_KdiUOABoJvjqSxh_c_Wz7zV_OxRxvNKBHB8ZW9xMFfSU6gmU2RsXY3RdDWySJkGal3ZCq24UnlHkeIpJcyQbq1K","domain":"ayo_coca_cola"}}
+
+
+
